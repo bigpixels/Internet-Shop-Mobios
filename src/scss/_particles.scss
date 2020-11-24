@@ -1,0 +1,239 @@
+@import 'responsive-txt';
+
+.button {
+	display: block;
+	height: auto;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	color: $color-main;
+	font-family: 'TTHoves-Bold';
+	font-size: 20px;
+	&__primary {
+		padding: 16px 50px;
+		background: $color-danger;
+		box-shadow: 0px 16px 64px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+	}
+	&__secondary {
+		padding: 16px 50px;
+		background: none;
+		box-shadow: 0px 16px 64px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		border: 1px solid $color-danger;
+	}
+	&_gray {
+		background-color: $color-gray;
+	}
+	&__center {
+		margin: 0 auto;
+	}
+}
+
+.scroll {
+	text-align: center;
+	position: relative;
+	padding: 30px 0;
+	max-width: 63px;
+	margin: 0 auto;
+	cursor: pointer;
+	&::after {
+		@include scroll-arrow;
+	}
+}
+
+.field {
+
+}
+
+.form {
+	background-color: $color-main;
+	padding: 60px;
+	box-shadow: 0px 16px 64px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	&__title {
+		text-align: center;
+	}
+	&__input-field {
+	}
+	&__input {
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		box-sizing: border-box;
+		border-radius: 8px;
+		padding: 12px;
+		width: 100%;
+	}
+	&__text-area {
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		box-sizing: border-box;
+		border-radius: 8px;
+		padding: 5px;
+		width: 100%;
+	}
+}
+
+.overlay {
+	display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 10;
+}
+
+.no-scroll {
+	overflow: hidden !important;
+}
+
+.title {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	&__primary {
+		padding-top: 20px;
+		position: relative;
+		max-width: 100%;
+		&::before {
+			@include line-over_left;
+		}
+	}
+	&_ta-left {
+		text-align-last: left;
+	}
+	&_Geometria-Bold {
+		font-family: 'Geometria-Bold';
+	}
+	&_Geometria-Medium {
+		font-family: 'Geometria-Medium';
+	}
+	&_TTHoves-Bold {
+		font-family: 'TTHoves-Bold';
+	}
+	&_TTHoves-Regular {
+		font-family: 'TTHoves-Regular';
+	}
+	&_fsz-12 {
+		font-size: 12px;
+	}
+	&_fsz-14 {
+		font-size: 14px;
+	}
+	&_fsz-16 {
+		@include fluidFontSize (14px, 16px, 320px, 599px, 16px);
+	}
+	&_fsz-18 {
+		@include fluidFontSize (16px, 18px, 768px, 1920px, 18px);
+	}
+	&_fsz-20 {
+		@include fluidFontSize (14px, 20px, 768px, 1920px, 20px);
+	}
+	&_fsz-24 {
+		@include fluidFontSize (16px, 24px, 768px, 1920px, 24px);
+	}
+	&_fsz-28 {
+		@include fluidFontSize (18px, 28px, 768px, 1920px, 28px);
+	}
+	&_fsz-34 {
+		@include fluidFontSize (24px, 34px, 768px, 1920px, 34px);
+	}
+	&_fsz-36 {
+		@include fluidFontSize (20px, 36px, 768px, 1920px, 36px);
+	}
+	&_fsz-40 {
+		@include fluidFontSize (18px, 40px, 320px, 1280px, 40px);
+	}
+	&_fsz-46 {
+		@include fluidFontSize (24px, 46px, 768px, 1920px, 46px);
+	}
+	&_fsz-48 {
+		@include fluidFontSize (36px, 48px, 768px, 1920px, 48px);
+	}
+	&_fsz-64 {
+		@include fluidFontSize (28px, 64px, 768px, 1920px, 64px);
+	}
+	&_fsz-80 {
+		@include fluidFontSize (36px, 80px, 768px, 1920px, 80px);
+	}
+	&_lh-24 {
+		line-height: 24px;
+	}
+	&_lh-35 {
+		line-height: 35px;
+	}
+	&_lh-45 {
+		line-height: 45px;
+	}
+	&_lh-60 {
+		line-height: 60px;
+	}
+	&_lh-81 {
+		line-height: 127%;
+	}
+	&_ls-01em {
+		letter-spacing: 0.1em;
+	}
+	&_color-main {
+		color: $color-main;
+	}
+	&_color-title {
+		color: $color-title;
+	}
+	&_color-subtitle {
+		color: $color-subtitle;
+	}
+	&_color-success {
+		color: $color-success;
+	}
+	&_color-paragraph {
+		color: $color-paragraph;
+	}
+	&_color-secondary {
+		color: $color-secondary;
+	}
+	&_color-copyright {
+		color: $color-copyright;
+	}
+	&_color-title {
+		color: $color-title;
+	}
+}
+
+.margin {
+	/*mt*/
+	&_mt-5 {
+		margin-top: 5px;
+	}
+	&_mt-13 {
+		margin-top: 13px;
+	}
+	&_mt-34{
+		margin-top: 34px;
+	}
+	&_mt-50{
+		margin-top: 50px;
+	}
+	&_mt-25 {
+		margin-top: 25px;
+	}
+	/*end mt*/
+
+	/*mb*/
+	&_mb-13 {
+		margin-bottom: 13px;
+	}
+	&_mb-22 {
+		margin-bottom: 22px;
+	}
+	&_mb-34 {
+		margin-bottom: 34px;
+	}
+	&_mb-40 {
+		margin-bottom: 40px;
+	}
+	&_mb-50 {
+		margin-bottom: 50px;
+	}
+	/*end mb*/
+}
